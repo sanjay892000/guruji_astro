@@ -2,13 +2,14 @@
     height: 100vh;
     width: 100vw;
     display: flex;
+    padding-top: 10px;
     justify-content: center;
     align-items: center;
 }
 
 form{
     height: auto;
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -87,5 +88,21 @@ form h1{
     &:hover{
         background-color:  rgb(6, 53, 120);
         transform: scale(1.019);
+    }
+}
+
+@media (max-width:1180px) {
+    form{
+        width: 70%;
+    }
+}
+@media (max-width:720px) {
+    form{
+        width: 90%;
+    }
+}
+@media (max-width:520px) {
+    form{
+        width: 95%;
     }
 }

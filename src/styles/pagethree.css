@@ -44,3 +44,19 @@
         transform: scale(1.019);
     }
 }
+
+@media (max-width:1180px) {
+    .form-data{
+        width: 70%;
+    }
+}
+@media (max-width:720px) {
+    .form-data{
+        width: 85%;
+    }
+}
+@media (max-width:520px) {
+    .form-data{
+        width: 95%;
+    }
+}
