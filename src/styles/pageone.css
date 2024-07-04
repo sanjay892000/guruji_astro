@@ -1,0 +1,91 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    height: auto;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+    background: rgb(255, 255, 255, 0.3);
+}
+form h1{
+    background: rgb(14,67,140);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0px;
+    margin-top: -20px;
+    &:hover{
+        transform: scale(1.011);
+    }
+
+}
+.form-page{
+    width: 80%;
+    height: 20px;
+    margin: 35px 0px;
+
+}
+.form-page div{
+    color: red;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    &:hover{
+        transform: scale(1.019);
+    }
+}
+.form-page label{
+    font-size: 20px;
+    color:  rgb(14,67,140);
+    margin-right: 10px;
+    &:hover{
+        transform: scale(1.019);
+    }
+}
+.form-page label span{
+    color: red;
+}
+.form-page input{
+    width: 65%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-bottom: 2px solid rgb(14,67,140);
+    color: rgb(14,67,140);
+    background: transparent;
+    &:hover{
+        transform: scale(1.019);
+    }
+}
+.button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.button button{
+    width: 120px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: 2px solid rgb(14,67,140);
+    color: white;
+    background: rgb(14,67,140);
+    cursor: pointer;
+    margin: 50px 0px;
+    &:hover{
+        background-color:  rgb(6, 53, 120);
+        transform: scale(1.019);
+    }
+}
