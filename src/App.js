@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PageOne from './components/PageOne';
 import PageTwo from './components/PageTwo';
 import PageThree from './components/PageThree';
-
+import baseURL from './BaseURL';
 
 function App() {
   const [step, setStep] = useState(1);
@@ -42,7 +42,7 @@ function App() {
   };
 
   const handleSubmit = async () => {
-    const response = await fetch(`http://localhost:5000/api/form/formdata`, {
+    const response = await fetch(`${baseURL}/api/form/formdata`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -77,6 +77,3 @@ function App() {
 }
 
 export default App;
-
-
-/* body: JSON.stringify({ name: formData.name, email: formData.email, phone: formData.phone, addline1: formData.addline1, addline2: formData.addline2, city: formData.city, state: formData.state, zip: formData.zip }), */
