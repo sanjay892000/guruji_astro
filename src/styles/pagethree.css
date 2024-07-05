@@ -1,5 +1,4 @@
 .form-data{
-    
     height: auto;
     width: 40%;
     display: flex;
@@ -48,16 +47,9 @@
     }
 }
 
-@media (max-width:1880px) {
-    .form-data{
-        width: 70%;
-        margin-top: 80px;
-    }
-}
 @media (max-width:1180px) {
     .form-data{
         width: 70%;
-        margin-top: 80px;
     }
 }
 @media (max-width:720px) {
