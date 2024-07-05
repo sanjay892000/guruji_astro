@@ -20,11 +20,11 @@ function PageThree(props) {
         </div>
         <div className="form-page3">
           <p>Address Line 1:&nbsp;</p>
-          <p>{formData.address1}</p>
+          <p>{formData.addline1}</p>
         </div>
         <div className="form-page3">
           <p>Address Line 2:&nbsp;</p>
-          <p>{formData.address2}</p>
+          <p>{formData.addline2}</p>
         </div>
         <div className="form-page3">
           <p>City:&nbsp;</p>

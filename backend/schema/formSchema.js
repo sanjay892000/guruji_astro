@@ -12,7 +12,7 @@ const FormSchema = new mongoose.Schema({  //'new mongoose.Schema' likho ya 'new 
         required: true,
         unique: true
     },
-    number: {
+    phone: {
         type: Number,
         required: true
     },

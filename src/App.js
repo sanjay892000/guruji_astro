@@ -10,8 +10,8 @@ function App() {
     name: '',
     email: '',
     phone: '',
-    address1: '',
-    address2: '',
+    addline1: '',
+    addline2: '',
     city: '',
     state: '',
     zip: '',
@@ -28,7 +28,7 @@ function App() {
     localStorage.setItem('formData', JSON.stringify(formData));
   }, [formData]);
   useEffect(() => {
-    
+
   }, []);
 
 
@@ -41,28 +41,42 @@ function App() {
     window.scrollTo(0, 0);
   };
 
-  const handleSubmit = () => {
-    // Submit form data to the server or perform other actions
-    alert('Form submitted!');
-    setStep(1)
-    setFormData({name: '',
-      email: '',
-      phone: '',
-      address1: '',
-      address2: '',
-      city: '',
-      state: '',
-      zip: '' })
+  const handleSubmit = async () => {
+    const response = await fetch(`http://localhost:5000/api/form/formdata`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ name: formData.name, email: formData.email, phone: formData.phone, addline1: formData.addline1, addline2: formData.addline2, city: formData.city, state: formData.state, zip: formData.zip }),
+    });
+    const note = await response.json();
+    if (note) {
+      alert('Form submitted!');
+      setStep(1)
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        addline1: '',
+        addline2: '',
+        city: '',
+        state: '',
+        zip: ''
+      })
+    }
   };
 
 
   return (
     <div>
-    {step === 1 && <PageOne nextStep={nextStep} formData={formData} setFormData={setFormData} />}
-    {step === 2 && <PageTwo nextStep={nextStep} prevStep={prevStep} formData={formData} setFormData={setFormData} />}
-    {step === 3 && <PageThree prevStep={prevStep} formData={formData} handleSubmit={handleSubmit} />}
-  </div>
+      {step === 1 && <PageOne nextStep={nextStep} formData={formData} setFormData={setFormData} />}
+      {step === 2 && <PageTwo nextStep={nextStep} prevStep={prevStep} formData={formData} setFormData={setFormData} />}
+      {step === 3 && <PageThree prevStep={prevStep} formData={formData} handleSubmit={handleSubmit} />}
+    </div>
   );
 }
 
 export default App;
+
+
+/* body: JSON.stringify({ name: formData.name, email: formData.email, phone: formData.phone, addline1: formData.addline1, addline2: formData.addline2, city: formData.city, state: formData.state, zip: formData.zip }), */

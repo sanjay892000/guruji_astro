@@ -9,8 +9,8 @@ function PageTwo(props) {
     const formik = useFormik({
         initialValues: formData,
         validationSchema: Yup.object({
-          address1: Yup.string().required('required').trim(),
-          address2: Yup.string().trim(),
+          addline1: Yup.string().required('required').trim(),
+          addline2: Yup.string().trim(),
           city: Yup.string().required('required').trim(),
           state: Yup.string().required('required').trim(),
           zip: Yup.string().required('please enter zip code.').matches(/^[0-9]+$/, "please enter a valid zip code").min(6).max(6)
@@ -30,24 +30,24 @@ function PageTwo(props) {
         <label>Address Line 1<span>*</span></label>
         <input
           type="text"
-          name="address1"
+          name="addline1"
           onChange={formik.handleChange}
-          value={formik.values.address1}
+          value={formik.values.addline1}
         />
         </div>
-        {formik.errors.address1 ? <div>{formik.errors.address1}</div> : null}
+        {formik.errors.addline1 ? <div>{formik.errors.addline1}</div> : null}
       </div>
       <div className='form-page'>
       <div className="labeltext">
         <label>Address Line 2</label>
         <input
           type="text"
-          name="address2"
+          name="addline2"
           onChange={formik.handleChange}
-          value={formik.values.address2}
+          value={formik.values.addline2}
         />
         </div>
-        {formik.errors.address2 ? <div>{formik.errors.address2}</div> : null}
+        {formik.errors.addline2 ? <div>{formik.errors.addline2}</div> : null}
       </div>
       <div className='form-page'>
       <div className="labeltext">

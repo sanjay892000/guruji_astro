@@ -8,7 +8,7 @@ const nodemailer = require('nodemailer');
 router.post('/formdata', [
     body('name', 'enter name').notEmpty(), //use express validator name is not empty
     body('email', 'enter a valid emails').isEmail(),
-    body('number', 'enter a valid phone number').isLength({ min: 10 }).isLength({ max: 10 }),
+    body('phone', 'enter a valid phone number').isLength({ min: 10 }).isLength({ max: 10 }),
     body('addline1', 'enter address line 1').notEmpty(),
     body('addline2', 'enter address line 2'),
     body('city', 'enter city').notEmpty(),
@@ -19,21 +19,16 @@ router.post('/formdata', [
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'mynotebook.gov.in@gmail.com',
-            pass: 'fdsypytrczpbqihp'
+            user: 'sanjay892000@gmail.com',
+            pass: 'rtydrpwvzcsafryw'
         }
     });
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() })
     }
     try {
-        let user = await FormSchema.findOne({ email: req.body.email });
-        if (user) {
-            const success = false;
-            return res.status(400).json({ success, errors: "sorry this user already exist with this emails" });
-        }
-        const { name, email, number, addline1, addline2, city, state, zip } = req.body;
-        const form = new FormSchema({ name, email, number, addline1, addline2, city, state, zip });
+        const { name, email, phone, addline1, addline2, city, state, zip } = req.body;
+        const form = new FormSchema({ name, email, phone, addline1, addline2, city, state, zip });
         const saveForm = await form.save();
         res.json(saveForm);
 
@@ -41,7 +36,7 @@ router.post('/formdata', [
             const mailOptions = {
                 from: "mynotebook.gov.in@gmail.com",
                 to: email,
-                subject: `Congratulations! ${name}, Thank you for applying`,
+                subject: `congratulations! ${name}, thank you for applying`,
                 html: `<!DOCTYPE html>
     <html>
     <head>
@@ -97,7 +92,7 @@ router.post('/formdata', [
             <p><strong>Your details is</strong></p>
             <p>Name: ${name}</p>
             <p>Email: ${email}</p>
-            <p>Number: ${number}</p>
+            <p>Number: ${phone}</p>
             <p>Add Line 1: ${addline1}</p>
             <p>Add Line 2: ${addline2}</p>
             <p>City: ${city}</p>
