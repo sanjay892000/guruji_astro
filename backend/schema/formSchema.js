@@ -21,7 +21,8 @@ const FormSchema = new mongoose.Schema({  //'new mongoose.Schema' likho ya 'new 
         required: true
     },
     addline2: {
-        type: String
+        type: String,
+        default: "not fill"
     },
     city: {
         type: String,

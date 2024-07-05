@@ -41,7 +41,7 @@ router.post('/formdata', [
             const mailOptions = {
                 from: "mynotebook.gov.in@gmail.com",
                 to: email,
-                subject: "no-reply",
+                subject: `Congratulations! ${name}, Thank you for applying`,
                 html: `<!DOCTYPE html>
     <html>
     <head>
@@ -52,7 +52,7 @@ router.post('/formdata', [
         }
 
         .container {
-            padding: 20px;
+            padding: 20px 0px;
             background-color: #f9f9f9;
             border-radius: 5px;
             width: 100%;
@@ -63,7 +63,7 @@ router.post('/formdata', [
         .header {
             background-color: #4CAF50;
             color: white;
-            padding: 10px 0;
+            padding: 10px 0px;
             text-align: center;
             border-radius: 5px 5px 0 0;
         }
@@ -80,7 +80,7 @@ router.post('/formdata', [
 
         .footer {
             text-align: center;
-            padding: 10px 0;
+            padding: 10px 0px;
             font-size: 0.9em;
             color: #888;
         }
@@ -95,14 +95,14 @@ router.post('/formdata', [
         <div class="content">
             <p><strong class="cong">Congratulations! </strong>${name},</p>
             <p><strong>Your details is</strong></p>
-            <p>${name}</p>
-            <p>${email}</p>
-            <p>${number}</p>
-            <p>${addline1}</p>
-            <p>${addline2}</p>
-            <p>${city}</p>
-            <p>${state}</p>
-            <p>${zip}</p>
+            <p>Name: ${name}</p>
+            <p>Email: ${email}</p>
+            <p>Number: ${number}</p>
+            <p>Add Line 1: ${addline1}</p>
+            <p>Add Line 2: ${addline2}</p>
+            <p>City: ${city}</p>
+            <p>State: ${state}</p>
+            <p>Zip Code: ${zip}</p>
             <p>Thank you for applying</p>
             <p>Best regards,</p>
             <p>Prabhat Center</p>
@@ -112,7 +112,6 @@ router.post('/formdata', [
         </div>
      </div>
    </body>
-
    </html>`
             };
             transporter.sendMail(mailOptions, (err, info) => {
@@ -126,7 +125,7 @@ router.post('/formdata', [
                 }
             });
             const success = true;
-            res.json({ success, message: "message send" });
+            console.log(success)
         }
         else {
             console.log("massage not send")

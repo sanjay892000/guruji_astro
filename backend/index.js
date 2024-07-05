@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
   }
 });
 
-app.use('/api/', require('./routes/formRouter'));
+app.use('/api/form', require('./routes/formRouter'));
 app.listen(port, () => {
   console.log(`backend app listening on port http://localhost:${port}`)
 });
