@@ -12,7 +12,8 @@ function PageOne(props) {
     validationSchema: Yup.object({
       name: Yup.string().required('required').trim(),
       email: Yup.string().email('Invalid email address').required('required'),
-      phone: Yup.number().integer('please enter a valid phone number.').required('please enter a phone number.'),
+      phone: Yup.string().required('please enter a phone number.').matches(/^[0-9]+$/, "please enter a valid number").min(10)
+      .max(10)
     }),
     onSubmit: (values) => {
       setFormData(values);

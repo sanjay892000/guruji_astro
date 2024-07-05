@@ -13,7 +13,7 @@ function PageTwo(props) {
           address2: Yup.string().trim(),
           city: Yup.string().required('required').trim(),
           state: Yup.string().required('required').trim(),
-          zip: Yup.number().integer('please enter a valid zip code.').required('please enter a zip code.'),
+          zip: Yup.string().required('please enter zip code.').matches(/^[0-9]+$/, "please enter a valid zip code").min(6).max(6)
         }),
         onSubmit: (values) => {
           setFormData(values);
