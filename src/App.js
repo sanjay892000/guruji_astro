@@ -5,7 +5,6 @@ import PageThree from './components/PageThree';
 
 
 function App() {
-
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
@@ -28,9 +27,19 @@ function App() {
   useEffect(() => {
     localStorage.setItem('formData', JSON.stringify(formData));
   }, [formData]);
+  useEffect(() => {
+    
+  }, []);
 
-  const nextStep = () => setStep(step + 1);
-  const prevStep = () => setStep(step - 1);
+
+  const nextStep = () => {
+    setStep(step + 1)
+    window.scrollTo(0, 0);
+  };
+  const prevStep = () => {
+    setStep(step - 1)
+    window.scrollTo(0, 0);
+  };
 
   const handleSubmit = () => {
     // Submit form data to the server or perform other actions
@@ -44,7 +53,6 @@ function App() {
       city: '',
       state: '',
       zip: '' })
-
   };
 
 

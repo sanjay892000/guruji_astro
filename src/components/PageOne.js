@@ -10,9 +10,9 @@ function PageOne(props) {
   const formik = useFormik({
     initialValues: formData,
     validationSchema: Yup.object({
-      name: Yup.string().required('Required').trim(),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      phone: Yup.number().integer('Please enter a valid phone number.').required('Please enter a phone number.'),
+      name: Yup.string().required('required').trim(),
+      email: Yup.string().email('Invalid email address').required('required'),
+      phone: Yup.number().integer('please enter a valid phone number.').required('please enter a phone number.'),
     }),
     onSubmit: (values) => {
       setFormData(values);
@@ -60,8 +60,8 @@ function PageOne(props) {
           </div>
           {formik.errors.phone ? <div>{formik.errors.phone}</div> : null}
         </div>
-        <div className="button">
-          <button type="submit" >Next</button>
+        <div className="buttonm">
+          <button type="submit">Next</button>
         </div>
       </form>
     </div>

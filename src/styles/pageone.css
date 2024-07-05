@@ -68,12 +68,17 @@ form h1{
         transform: scale(1.019);
     }
 }
-.button{
-    width: 100%;
+.buttonm{
+    width: 80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
-.button button{
+.button{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.button button, .buttonm button{
     width: 120px;
     height: 50px;
     border: none;

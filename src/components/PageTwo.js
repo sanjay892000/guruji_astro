@@ -9,11 +9,11 @@ function PageTwo(props) {
     const formik = useFormik({
         initialValues: formData,
         validationSchema: Yup.object({
-          address1: Yup.string().required('Required').trim(),
+          address1: Yup.string().required('required').trim(),
           address2: Yup.string().trim(),
-          city: Yup.string().required('Required').trim(),
-          state: Yup.string().required('Required').trim(),
-          zip: Yup.number().integer('Please enter a valid zip code.').required('Please enter a zip code.'),
+          city: Yup.string().required('required').trim(),
+          state: Yup.string().required('required').trim(),
+          zip: Yup.number().integer('please enter a valid zip code.').required('please enter a zip code.'),
         }),
         onSubmit: (values) => {
           setFormData(values);
