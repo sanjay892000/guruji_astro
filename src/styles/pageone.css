@@ -52,7 +52,6 @@ form h1 {
 .form-page label {
     font-size: 20px;
     color: rgb(14, 67, 140);
-    font-weight: 500;
     margin-right: 10px;
     &:hover {
         transform: scale(1.019);
@@ -138,7 +137,6 @@ form h1 {
     .form-page label {
         font-size: 15px;
         margin-right: 8px;
-        font-weight: 500;
     }
 
     .form-page input {
@@ -181,7 +179,7 @@ form h1 {
     .form-page label {
         font-size: 13px;
         margin-right: 8px;
-        font-weight: 500;
+
     }
 
     .form-page input {
@@ -223,7 +221,7 @@ form h1 {
     .form-page label {
         font-size: 12px;
         margin-right: 8px;
-        font-weight: 500;
+
     }
 
     .form-page input {
