@@ -100,6 +100,7 @@
 @media (max-width:520px) {
     .form-data{
         width: 80%;
+        margin-top: -25px;
     }
     .form-page3{
         width: 90%;

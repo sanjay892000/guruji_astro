@@ -200,6 +200,7 @@ form h1 {
 @media (max-width:520px) {
     form {
         width: 80%;
+        margin-top: -25px;
     }
 
     form h1 {
