@@ -1,4 +1,4 @@
-.container{
+.container {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -6,108 +6,236 @@
     align-items: center;
 }
 
-form{
-    margin-top: 15px;
+form {
     height: auto;
     width: 65%;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     justify-content: flex-start;
     background: rgb(255, 255, 255, 0.3);
 }
-form h1{
-    background: rgb(14,67,140);
+
+form h1 {
+    background: rgb(14, 67, 140);
     color: white;
     width: 100%;
     text-align: center;
     padding: 15px 0px;
-    margin-top: -20px;
-    &:hover{
+    margin-top: -15px;
+
+    &:hover {
         transform: scale(1.011);
     }
 
 }
-.form-page{
-    width: 80%;
+
+.form-page {
+    width: 85%;
     height: auto;
-    margin: 35px 0px;
+    margin: 28px 0px;
 
 }
-.form-page div{
+
+.form-page div {
     color: red;
     font-size: 12px;
     display: flex;
     justify-content: space-between;
-    &:hover{
+
+    &:hover {
         transform: scale(1.019);
     }
 }
-.form-page label{
+
+.form-page label {
     font-size: 20px;
-    color:  rgb(14,67,140);
+    color: rgb(14, 67, 140);
+    font-weight: 500;
     margin-right: 10px;
-    &:hover{
+    &:hover {
         transform: scale(1.019);
     }
 }
-.form-page label span{
+
+.form-page label span {
     color: red;
 }
-.form-page input{
+
+.form-page input {
     width: 65%;
     height: 100%;
     border: none;
     outline: none;
     padding: 5px 10px;
     font-size: 20px;
-    border-bottom: 2px solid rgb(14,67,140);
-    color: rgb(14,67,140);
+    border-bottom: 2px solid rgb(14, 67, 140);
+    color: rgb(14, 67, 140);
     background: transparent;
-    &:hover{
+
+    &:hover {
         transform: scale(1.019);
     }
 }
-.buttonm{
-    width: 80%;
+
+.buttonm {
+    width: 88%;
     display: flex;
     justify-content: flex-end;
 }
-.button{
-    width: 80%;
+
+.button {
+    width: 85%;
     display: flex;
     justify-content: space-between;
 }
-.button button, .buttonm button{
+
+.button button,
+.buttonm button {
     width: 120px;
     height: 50px;
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
     font-size: 20px;
-    border: 2px solid rgb(14,67,140);
+    border: 2px solid rgb(14, 67, 140);
     color: white;
-    background: rgb(14,67,140);
+    background: rgb(14, 67, 140);
     cursor: pointer;
     margin: 50px 0px;
-    &:hover{
-        background-color:  rgb(6, 53, 120);
+
+    &:hover {
+        background-color: rgb(6, 53, 120);
         transform: scale(1.019);
     }
 }
 
 @media (max-width:1180px) {
-    form{
+
+    form {
+        margin-top: 10px;
         width: 70%;
     }
-}
-@media (max-width:720px) {
-    form{
-        width: 90%;
+
+    form h1 {
+        padding: 15px 0px;
+        margin-top: -10px;
+        font-size: 22px;
+
+    }
+
+    .form-page {
+        width: 80%;
+        margin: 25px 0px;
+
+    }
+
+    .form-page div {
+        font-size: 15px;
+    }
+
+    .form-page label {
+        font-size: 15px;
+        margin-right: 8px;
+        font-weight: 500;
+    }
+
+    .form-page input {
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+
+    .button button,
+    .buttonm button {
+        width: 100px;
+        height: 45px;
+        padding: 5px 10px;
+        font-size: 17px;
+        margin: 40px 0px;
     }
 }
+
+@media (max-width:720px) {
+    form {
+        margin-top: 10px;
+        width: 75%;
+    }
+
+    form h1 {
+        padding: 15px 0px;
+        margin-top: -10px;
+        font-size: 19px;
+
+    }
+
+    .form-page {
+        margin: 25px 0px;
+
+    }
+
+    .form-page div {
+        font-size: 11px;
+    }
+
+    .form-page label {
+        font-size: 13px;
+        margin-right: 8px;
+        font-weight: 500;
+    }
+
+    .form-page input {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .button button,
+    .buttonm button {
+        width: 85px;
+        height: 40px;
+        padding: 5px 10px;
+        font-size: 15px;
+        margin: 30px 0px;
+    }
+}
+
 @media (max-width:520px) {
-    form{
-        width: 95%;
+    form {
+        width: 80%;
+    }
+
+    form h1 {
+        padding: 12px 0px;
+        margin-top: -10px;
+        font-size: 15px;
+
+    }
+
+    .form-page {
+        margin: 22px 0px;
+
+    }
+
+    .form-page div {
+        font-size: 10px;
+    }
+
+    .form-page label {
+        font-size: 12px;
+        margin-right: 8px;
+        font-weight: 500;
+    }
+
+    .form-page input {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .button button,
+    .buttonm button {
+        width: 75px;
+        height: 33px;
+        font-size: 12px;
+        margin: 20px 0px;
     }
 }

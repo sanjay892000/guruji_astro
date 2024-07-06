@@ -1,5 +1,5 @@
 .form-data{
-    margin-top: 30px;
+    margin-top: 15px;
     height: auto;
     width: 65%;
     display: flex;
@@ -9,8 +9,7 @@
     background: rgb(255, 255, 255, 0.3);
 }
 .form-page3{
-    padding-left: 10%;
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -21,10 +20,11 @@
 .form-data h1{
     background: rgb(14,67,140);
     color: white;
+    margin-top: -10px;
     width: 100%;
     text-align: center;
     padding: 15px 0px;
-    margin-top: 0px;
+    font-size: 25px;
     &:hover{
         transform: scale(1.011);
     }
@@ -32,17 +32,19 @@
 }
 
 .form-page3 p:nth-child(1){
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 10px;
     color: rgb(185, 0, 0);
     &:hover{
         transform: scale(1.019);
     }
 }
 .form-page3 p:nth-child(2){
-    font-size: 20px;
-    font-weight: 600;
-    padding-right: 10%;
+    font-size: 18px;
+    margin-left: 10px;
+    font-weight: 500;
+    padding-right: 5%;
     color: rgb(14,67,140);
     &:hover{
         transform: scale(1.019);
@@ -53,14 +55,68 @@
     .form-data{
         width: 70%;
     }
+    .form-page3{
+        width: 90%;
+    }
+    .form-data h1{
+        width: 100%;
+        padding: 15px 0px;
+        font-size: 22px;
+    }
+    
+    .form-page3 p:nth-child(1){
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .form-page3 p:nth-child(2){
+        font-size: 15px;
+        font-weight: 500;
+        padding-right: 10%;
+    }
 }
 @media (max-width:720px) {
     .form-data{
-        width: 85%;
+        width: 75%;
+    }
+    .form-page3{
+        width: 90%;
+    }
+    .form-data h1{
+        width: 100%;
+        padding: 13px 0px;
+        font-size: 19px;
+    }
+    
+    .form-page3 p:nth-child(1){
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .form-page3 p:nth-child(2){
+        font-size: 13px;
+        font-weight: 500;
+        padding-right: 10%;
     }
 }
 @media (max-width:520px) {
     .form-data{
-        width: 95%;
+        width: 80%;
+    }
+    .form-page3{
+        width: 90%;
+    }
+    .form-data h1{
+        width: 100%;
+        padding: 15px 0px;
+        font-size: 15px;
+    }
+    
+    .form-page3 p:nth-child(1){
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .form-page3 p:nth-child(2){
+        font-size: 12px;
+        font-weight: 500;
+        padding-right: 10%;
     }
 }
